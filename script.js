@@ -21,3 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     event.stopPropagation();
   });
 });
+
+
+const btnNavE1=document.querySelector(".btn-mobile-view")
+const headerE1=document.querySelector(".header")
+btnNavE1.addEventListener("click",function(){
+  headerE1.classList.toggle("nav-open")
+})
