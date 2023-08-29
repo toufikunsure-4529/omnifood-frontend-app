@@ -7,7 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FAFCFF;
+  /* background-color: #FAFCFF; */
+  background-color: #FFFFFF;
   /* Because we want heade to be sticky later */
   height: 6.6rem;
   padding: 0 4.8rem;
@@ -105,8 +106,9 @@
 
 .section-hero{
   /* background-color: #fdf2e9; */
-  background-color: #FAFCFF;
-  padding:4.8rem 0 9.6rem 0;
+  /* background-color: #FAFCFF; */
+  background-color: #FFFFFF;
+  padding:7.8rem 0 9.6rem 0;
 }
 
 
@@ -123,10 +125,13 @@
 
 
 .hero-description{
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 4.8rem;
   margin-top: 32px;
+}
+.hero-description span{
+  color: #f58320;
 }
 
 
@@ -271,12 +276,14 @@ border: 3px solid #fdf2e9;
   
 }
 
+
 .meal{
   box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.075) ;
   border-radius: 11px;
-  margin-bottom: 9.6rem;
+  margin-bottom: 3.6rem;
   overflow: hidden;
   transition: all 0.4s;
+  padding-top: 20px;
 }
 
 .meal:hover{
@@ -286,20 +293,56 @@ border: 3px solid #fdf2e9;
 }
 
 .meal-content{
-  padding:3.2rem 4.8rem 4.8rem 4.8rem;
+  padding:2.2rem 1.8rem 2.8rem 1.8rem;
 
 }
 
 .meal-tags{
   margin-bottom: 1.2rem;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
 }
+.meal-buy{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+  gap: 3rem;
+}
+.meal-price{
+  font-size: 25px;
+}
+.delivery-time{
+  font-size: 14px;
+}
+.add-cart{
+  padding: 1rem 1.7rem;
+  background-color: rgb(255, 152, 0);
+  color: #ffff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  border-radius:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-cart:hover{
+  text-decoration: none;
+    background-color: rgb(178, 106, 0);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+}
+.add-icon{
+  font-size: 21px;
+  margin-right: 12px;
+}
+
 
 
 .tag{
   display: inline-block;
-  padding: 0.4rem 0.8rem;
+  padding: 0.8rem 1.2rem;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #333;
@@ -311,6 +354,12 @@ border: 3px solid #fdf2e9;
   background-color: #51cf66;
 
 }
+.tag--vagitar{
+  background-color: #ffff;
+  border: 1px solid #999;
+  
+}
+
 
 .tag--vegan{
   background-color: #94d82d;
@@ -322,10 +371,9 @@ border: 3px solid #fdf2e9;
 
 
 .meal-title{
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   color: #333;
-  font-weight: 600;
-  margin-bottom: 3.2rem;
+  margin-bottom: 0.5rem;
 }
 
 
@@ -337,21 +385,23 @@ border: 3px solid #fdf2e9;
 }
 
 .meal-attribute{
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
 .meal-icon{
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 2rem;
+  width: 2rem;
   color: #e67e22;
-
 }
 
 .meal-img{
-  width: 100%;
+
+    aspect-ratio: auto 250 / 220;
+    width: 100%;
+    
 }
 
 .all-recipes{
