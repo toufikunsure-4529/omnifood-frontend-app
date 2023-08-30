@@ -1,11 +1,5 @@
 
 ///////////////////////////////////////////////////////////
-// Set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
-
-///////////////////////////////////////////////////////////
 // Make mobile navigation work
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -90,4 +84,10 @@ function checkFlexGap() {
 }
 checkFlexGap();
 
+
+// add to cart
+
+let addCart=(()=>{
+  alert("Healthy Meal Plan added into Cart!")
+})
 
