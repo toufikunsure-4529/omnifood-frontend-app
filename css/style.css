@@ -330,7 +330,10 @@ border: 3px solid #fdf2e9;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border: none;
 }
+
 .add-cart:hover{
   text-decoration: none;
     background-color: rgb(178, 106, 0);
