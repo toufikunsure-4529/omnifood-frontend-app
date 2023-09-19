@@ -18,12 +18,15 @@
   <link rel="stylesheet" href="/css/general.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/queries.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
   <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   <script defer src="/js/script.js"></script>
+
 
 
   <title>Never cook again | Profile</title>
@@ -40,9 +43,46 @@
           <span>Explore &reg;</span></a></li>
           <li><a class="main-nav-link" href="/"><ion-icon class="meal-icon" name="cart-outline"></ion-icon>
             <span>Cart</span></a></li>
-        <li><a class="main-nav-link nav-cta" href="#">Login</a></li>
+        <li><a class="main-nav-link nav-cta" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Login</a></li>
       
       </ul>
+
+
+<!-- Login Modal Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Khabar Bolo Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" required>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+          <p id="showMsg"></p>
+        </form>
+        <a class="" href="#cta">Sign up Now</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </nav>
 
     <button class="btn-mobile-nav">
@@ -143,7 +183,7 @@
           <span><strong>4.9</strong> rating (537)</span></li>
       </ul>
       <div class="meal-buy">
-      <p class="meal-price">₹120</p>
+      <p class="meal-price">₹85</p>
       <p class="delivery-time">40 MINS</p>
       <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
     </div>
@@ -417,7 +457,7 @@
         </select>
       </div>
 
-        <button class="btn btn--form">Sign up now</button>
+        <button class="signup-btn">Sign up now</button>
 
       </form>
     </div>
@@ -511,5 +551,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+
 </body>
 </html>

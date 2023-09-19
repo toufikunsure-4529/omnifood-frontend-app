@@ -35,7 +35,7 @@ btnNavEl.addEventListener("click", function () {
 
 
 
-
+// add to cart live toast bootstarp
 
   const toastTrigger = document.getElementById('liveToastBtn')
   const toastLiveExample = document.getElementById('liveToast')
@@ -46,5 +46,15 @@ btnNavEl.addEventListener("click", function () {
       toastBootstrap.show()
     })
   }
+
+
+  // login button click 
+
+  let loginBtn=document.getElementById("loginBtn")
+  let showMsg=document.getElementById("showMsg")
+  loginBtn.addEventListener("click",function(){
+    showMsg.innerHTML="Login features are coming soon. Sorry for the inconvenience..."
+  })
+
 
 
