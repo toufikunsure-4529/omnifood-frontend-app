@@ -13,7 +13,13 @@
   height: 6.6rem;
   padding: 0 4.8rem;
   position: relative;
-}
+  }
+
+    .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
 
 .logo{
   height: 9.2rem;
@@ -61,6 +67,9 @@
   border: 1px solid #ca874d;
 
 }
+.main-nav{
+  position:sticky;
+}
 
 /* MOBILE */
 .btn-mobile-nav{
@@ -103,6 +112,8 @@
         color: red;
         font-weight: 400;
       }
+      
+      
 
 /* ********************************* */
 /* HERO SECTION */

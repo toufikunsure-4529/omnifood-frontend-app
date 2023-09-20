@@ -351,4 +351,42 @@ Insted, 1rem = 1rem = 16px
   .grid--3-cols, .grid--4-cols {
     grid-template-columns: repeat(1,1fr);
   }
+
+.meal-tags{
+  position: absolute;
+  right: 0;
+  top: 35px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
+ .meal-tags-img{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+ }
+
+ .meal-img {
+  height: 250px;
+  aspect-ratio: auto 214 / 214;
+  width: 250px;
+}
+
+.meal:nth-child(3){
+  order: -1;
+}
+.meal:nth-child(2){
+  order: 1;
+}
+.meal:nth-child(1){
+  order: 2;
+}
+
+
+
+
+}
+
+
