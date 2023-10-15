@@ -350,7 +350,7 @@ Insted, 1rem = 1rem = 16px
 @media (max-width: 35em) {
   .grid--3-cols, .grid--4-cols {
     grid-template-columns: repeat(1,1fr);
-  }
+  } 
 
 .meal-tags{
   position: absolute;

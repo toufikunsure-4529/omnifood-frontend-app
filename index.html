@@ -15,11 +15,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/bootstrap-5.3.2-dist/css/bootstrap.css">
+
   <link rel="stylesheet" href="/css/general.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/queries.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
@@ -41,47 +42,29 @@
       <ul class="main-nav-list">
         <li><a class="main-nav-link" href="/"><ion-icon class="meal-icon" name="restaurant-outline"></ion-icon>
           <span>Explore &reg;</span></a></li>
-          <li><a class="main-nav-link" href="/"><ion-icon class="meal-icon" name="cart-outline"></ion-icon>
+          <li><a class="main-nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" ><ion-icon class="meal-icon" name="cart-outline"></ion-icon>
             <span>Cart</span></a></li>
         <li><a class="main-nav-link nav-cta" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Login</a></li>
-      
       </ul>
 
+      <!-- add to cart model offcanvas -->
 
-<!-- Login Modal Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Khabar Bolo Login</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="cart-item">
+
+            <ion-icon class="meal-icon" name="cart-outline"></ion-icon>
+          <h2>Your cart is empty</h2>
+          <button type="button" class="btn btn-warning">Browse Products</button>
+        </div>
+
+        </div>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" required>
-          </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
-          <p id="showMsg"></p>
-        </form>
-        <a class="" href="#cta">Sign up Now</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
     </nav>
 
@@ -524,6 +507,7 @@
       </ul>
 
       <p class="copyright">Designed & developed by <a href="#">Toufik</a>.</p>
+
 
     </div>
 
