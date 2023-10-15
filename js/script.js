@@ -70,5 +70,8 @@ obs.observe(sectionHeroEl);
     }
 }
 
-
+let browseProd=document.getElementById("browseProd")
+browseProd.onclick = function () {
+  location.href = "https://getbootstrap.com/docs/5.3/components/buttons/#base-class";
+};
 
