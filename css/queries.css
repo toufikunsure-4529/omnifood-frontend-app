@@ -213,6 +213,7 @@ Insted, 1rem = 1rem = 16px
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
+
   }
 /* ********************************* */
 /* BELOW 544px (phones) */
@@ -274,6 +275,10 @@ Insted, 1rem = 1rem = 16px
       height: 32rem;
       grid-row: 1;
 
+    }
+
+    .carousel-item img{
+      height: 100%;
     }
 
     
