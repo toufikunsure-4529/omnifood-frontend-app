@@ -8,13 +8,14 @@ btnNavEl.addEventListener("click", function () {
 });
 
 
-
 // Sticky navigation
+
 const sectionHeroEl = document.querySelector(".section-hero");
 
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
+    console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -28,11 +29,10 @@ const obs = new IntersectionObserver(
     // In the viewport
     root: null,
     threshold: 0,
-    rootMargin: "-120px",
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionHeroEl);
-
 
 
 // add to cart live toast bootstarp
