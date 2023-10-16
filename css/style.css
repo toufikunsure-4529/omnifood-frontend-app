@@ -13,6 +13,7 @@
   height: 6.6rem;
   padding: 0 4.8rem;
   position: relative;
+  z-index: 999;
   }
 
     .main-nav ul {
@@ -244,6 +245,7 @@ border: 3px solid #fdf2e9;
   color: #cf711f;
   font-weight: 700;
 }
+
 /* ********************************* */
 /* FEATURED IN SECTION */
 /* ********************************* */
@@ -782,9 +784,8 @@ margin-bottom: 1.6rem;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 .signup-btn{
-  background-color: rgb(255, 152, 0);
-
-  color: #fdf2e9;
+  background-color: #e67e22;
+  color: rgba(0, 0, 0, 0.87);
   align-self: end;
   padding: 1.2rem;
   font-size: 18px;
@@ -797,7 +798,8 @@ margin-bottom: 1.6rem;
   color: #fdf2e9;
   border-color:250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #e67e22;
+  background-color: rgb(255, 152, 0);
+
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 }
 

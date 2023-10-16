@@ -201,9 +201,11 @@ body{
   text-decoration: none;
   font-size: 2rem;
   font-weight: 400;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-
+  padding: 1.6rem 6.2rem;
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   /* only necessary for .btn */
   border: none;
   cursor: pointer;
