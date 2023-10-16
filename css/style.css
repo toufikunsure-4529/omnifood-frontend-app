@@ -162,6 +162,11 @@
 
       }
 
+      .offcanvas-header .btn-close{
+        font-size: 18px;
+        background-color: rgb(255, 152, 0);
+      }
+
 /* ********************************* */
 /* HERO SECTION */
 /* ********************************* */
@@ -201,6 +206,11 @@
 .hero-img{
   width: 100%;
 }
+
+.carousel-item img{
+  height: 420px;
+}
+
 
 
 
@@ -697,8 +707,8 @@ margin-bottom: 1.6rem;
   /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
   border-radius: 11px;
-  /* background-image: linear-gradient(to right bottom,darkseagreen,darkseagreen); */
-  background-image: url("../img/meals/meal-2.jpg");
+  background-color: darkslategrey;
+  /* background-image: url("../img/meals/meal-2.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;  
 
@@ -724,9 +734,11 @@ margin-bottom: 1.6rem;
   margin-bottom: 4.8rem;
 }
 .cta-img-box{
-  background-image: url("../img/gallery/blog1.png");
   background-size: cover;
   background-position: center;
+  background-color: #ca874d;
+  border-bottom-left-radius: 80%;
+
 }
 
 .cta-form{
@@ -768,6 +780,25 @@ margin-bottom: 1.6rem;
   /* outline: 4px solid #e67e22;
   outline-offset: 8px; */
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+.signup-btn{
+  background-color: rgb(255, 152, 0);
+
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: all 0.4s;
+}
+
+.signup-btn:hover{
+  background-color: rgb(94, 91, 91);
+  color: #fdf2e9;
+  border-color:250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #e67e22;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 1px -2px, rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
 }
 
 
