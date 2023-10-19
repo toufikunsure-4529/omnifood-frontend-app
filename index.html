@@ -383,22 +383,9 @@
 </div>
     </div>
 
-    <div class="toast-container position-fixed top-0 end-0 p-3">
-      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="d-flex">
-          <div class="toast-body">
-            <a><ion-icon class="green-tick" name="checkmark-circle-outline"></ion-icon></a>
-    
-            Item added to cart
-          </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-      </div>
-    </div>
   </section>
   
 
-  
  
   <section class="section-meals" id="meals">
   <div class="container center-text">
@@ -575,14 +562,12 @@
   });
   
 
+
 // add to cart item 
-
-
 // Get references to the button and cart items container
 const addButton = document.getElementById("addItemButton");
 const cartItemsContainer = document.getElementById("cartItems");
 const totalAmountDisplay = document.getElementById("totalAmount");
-
 
 // Initialize the cart as an empty array
 const cart = [];
@@ -597,9 +582,6 @@ addButton.addEventListener("click", () => {
     return;
   }
   cart.push(item);
-
-
-
   // Update the cart display
   displayCart();
 });
@@ -617,10 +599,8 @@ function displayCart() {
     cartItem.textContent = `Item ${index + 1}: ${item.name} - ${item.price.toFixed(2)}`;
     cartItemsContainer.appendChild(cartItem);
     total += item.price;
-
-
   });
-  totalAmountDisplay.textContent = `Total: $${total.toFixed(2)}`;
+  totalAmountDisplay.textContent = `Total: ${total.toFixed(2)}`;
   cartItemsBtn.hidden=false;
 }
 

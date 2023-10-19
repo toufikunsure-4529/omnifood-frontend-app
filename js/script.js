@@ -67,6 +67,7 @@ obs.observe(sectionHeroEl);
         input.value = numericInput.slice(0, maxLength);
     } else {
         input.value = numericInput;
+  
     }
 }
 
@@ -75,3 +76,9 @@ browseProd.onclick = function () {
   location.href = "https://getbootstrap.com/docs/5.3/components/buttons/#base-class";
 };
 
+
+
+function addCart(){
+  alert("Item added to cart. Please check out.")
+
+}
