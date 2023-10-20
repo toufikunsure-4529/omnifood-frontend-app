@@ -1,0 +1,248 @@
+  <div class="meal">
+        <div class="meal-tags-img">
+        <div class="meal-tags">
+        <span class="tag tag--vagitarian">10% OFF</span>
+        <span class="tag tag--vagitar">Free Delivery</span>
+      </div>
+        <img src="/img/gallery/meal.png" class="meal-img" alt="Japanese Gyozas">
+      </div>
+        <div class="meal-content">
+   
+        <p class="meal-title">HEALTHY MEAL PLAN</p>
+        <ul class="meal-attributes">
+          <li class="meal-attribute">
+            <span>Pecorino smellY cheese melted cheese</span>
+          </li>
+          <li class="meal-attribute">
+            <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+            <span><strong>4.9</strong> rating (537)</span></li>
+        </ul>
+        <div class="meal-buy">
+        <p class="meal-price">₹95</p>
+        <p class="delivery-time">40 MINS</p>
+        <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()" id="addItemButton"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+      </div>
+      </div>
+    </div>
+
+
+    <!-- 2ND PRODUCT CARD-->
+    <div class="meal">
+      <div class="meal-tags-img">
+      <div class="meal-tags">
+      <span class="tag tag--vagitarian">10% OFF</span>
+      <span class="tag tag--vagitar">Free Delivery</span>
+    </div>
+    <img src="/img/resturent-meal/meal1.png" class="meal-img" alt="Japanese Gyozas">
+      </div>
+    <div class="meal-content">
+      <p class="meal-title">HEALTHY MEAL PLAN</p>
+      <ul class="meal-attributes">
+        <li class="meal-attribute">
+          <span>Pecorino smellY cheese melted cheese</span>
+        </li>
+        <li class="meal-attribute">
+          <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+          <span><strong>4.9</strong> rating (537)</span></li>
+      </ul>
+      <div class="meal-buy">
+      <p class="meal-price">₹85</p>
+      <p class="delivery-time">40 MINS</p>
+      <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+    </div>
+    </div>
+  </div>
+
+  <!-- 3RD PRODUCT CARD -->
+  <div class="meal">
+    <div class="meal-tags-img">
+    <div class="meal-tags">
+    <span class="tag tag--vagitarian">10% OFF</span>
+    <span class="tag tag--vagitar">Free Delivery</span>
+  </div>
+  <img src="/img/resturent-meal/meal-2.png" class="meal-img" alt="Japanese Gyozas">
+    </div>
+  <div class="meal-content">
+    <p class="meal-title">HEALTHY MEAL PLAN</p>
+    <ul class="meal-attributes">
+      <li class="meal-attribute">
+        <span>Pecorino smellY cheese melted cheese</span>
+      </li>
+      <li class="meal-attribute">
+        <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+        <span><strong>4.9</strong> rating (537)</span></li>
+    </ul>
+    <div class="meal-buy">
+    <p class="meal-price">₹120</p>
+    <p class="delivery-time">40 MINS</p>
+    <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+  </div>
+  </div>
+</div>
+
+<!-- 4TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal1.png" class="meal-img" alt="Japanese Gyozas">
+</div>
+<div class="meal-content">
+
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹120</p>
+  <p class="delivery-time">40 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
+
+
+<!-- 5TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal-5.png" class="meal-img" alt="Japanese Gyozas">
+  </div>
+<div class="meal-content">
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹120</p>
+  <p class="delivery-time">40 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
+
+
+<!-- 6TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal-6.png" class="meal-img" alt="Japanese Gyozas">
+  </div>
+<div class="meal-content">
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <div class="item">
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹1200</p>
+  <p class="delivery-time">30 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 7TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal-2.png" class="meal-img" alt="Japanese Gyozas">
+  </div>
+<div class="meal-content">
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹120</p>
+  <p class="delivery-time">40 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" id="liveToastBtn"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
+
+<!-- 8TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal-4.png" class="meal-img" alt="Japanese Gyozas">
+  </div>
+  <div class="meal-content">
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹120</p>
+  <p class="delivery-time">40 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" onclick="addCart()"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
+
+<!-- 9TH PRODUCT CARD -->
+<div class="meal">
+  <div class="meal-tags-img">
+  <div class="meal-tags">
+  <span class="tag tag--vagitarian">10% OFF</span>
+  <span class="tag tag--vagitar">Free Delivery</span>
+</div>
+<img src="/img/resturent-meal/meal-3.png" class="meal-img" alt="Japanese Gyozas">
+  </div>
+<div class="meal-content">
+  <p class="meal-title">HEALTHY MEAL PLAN</p>
+  <ul class="meal-attributes">
+    <li class="meal-attribute">
+      <span>Pecorino smellY cheese melted cheese</span>
+    </li>
+    <li class="meal-attribute">
+      <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+      <span><strong>4.9</strong> rating (537)</span></li>
+  </ul>
+  <div class="meal-buy">
+  <p class="meal-price">₹120</p>
+  <p class="delivery-time">40 MINS</p>
+  <button href="0#" class="add-cart  margin-right-sm" id="liveToastBtn"><ion-icon class="add-icon" name="add-outline"></ion-icon><span>ADD</span></button>
+</div>
+</div>
+</div>
