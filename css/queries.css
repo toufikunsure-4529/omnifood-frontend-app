@@ -379,7 +379,7 @@ Insted, 1rem = 1rem = 16px
   width: 250px;
 }
 
-.meal:nth-child(3){
+/* .meal:nth-child(3){
   order: -1;
 }
 .meal:nth-child(2){
@@ -387,7 +387,7 @@ Insted, 1rem = 1rem = 16px
 }
 .meal:nth-child(1){
   order: 2;
-}
+} */
 
 
 
