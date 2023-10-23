@@ -2,27 +2,27 @@ var productData = [
   {
       offer:15,
       imageSrc: "/img/resturent-meal/meal1.png",
-      title: "Meal 1",
+      title: "Chicken fried rice",
       description: "Description for Meal 1",
-      price: "₹95",
-      time:30,
-      rating:4.2,
-      peopleBuy:500
+      price: "₹198",
+      time:35,
+      rating:4.6,
+      peopleBuy:290
   },
   {
       offer:15,
       imageSrc: "/img/resturent-meal/meal-2.png",
-      title: "Meal 2",
+      title: "Hydrabadi Mutton Meal",
       description: "Description for Meal 2",
-      price: "₹85",
+      price: "₹159",
       time:30,
-      rating:4.2,
-      peopleBuy:500
+      rating:4.1,
+      peopleBuy:120
   },
   {
       offer:15,
       imageSrc: "/img/resturent-meal/meal1.png",
-      title: "Meal 3",
+      title: "Hydrabadi Chicken fried rice",
       description: "Description for Meal 3",
       price: "₹75",
       time:30,
@@ -32,7 +32,7 @@ var productData = [
   {
     offer:15,
     imageSrc: "/img/resturent-meal/meal-5.png",
-    title: "Meal 4",
+    title: "Chicken Rol",
     description: "Description for Meal 4",
     price: "₹75",
     time:30,
@@ -41,8 +41,18 @@ var productData = [
 },
 {
   offer:15,
+  imageSrc: "/img/resturent-meal/meal-2.png",
+  title: "Mutton Fry",
+  description: "Description for Meal 4",
+  price: "₹75",
+  time:30,
+  rating:4.2,
+  peopleBuy:500
+},
+{
+  offer:15,
   imageSrc: "/img/resturent-meal/meal-6.png",
-  title: "Meal 4",
+  title: "Vegg",
   description: "Description for Meal 4",
   price: "₹75",
   time:30,
@@ -51,8 +61,8 @@ var productData = [
 },
 {
   offer:15,
-  imageSrc: "/img/resturent-meal/meal-6.png",
-  title: "Meal 4",
+  imageSrc: "/img/resturent-meal/meal-3.png",
+  title: "Chicken Fry",
   description: "Description for Meal 4",
   price: "₹75",
   time:30,
@@ -61,18 +71,8 @@ var productData = [
 },
 {
   offer:15,
-  imageSrc: "/img/resturent-meal/meal-2.png",
-  title: "Meal 4",
-  description: "Description for Meal 4",
-  price: "₹75",
-  time:30,
-  rating:4.2,
-  peopleBuy:500
-},
-{
-  offer:15,
-  imageSrc: "/img/resturent-meal/meal-2.png",
-  title: "Meal 4",
+  imageSrc: "/img/resturent-meal/meal-4.png",
+  title: "Egg Roll",
   description: "Description for Meal 4",
   price: "₹75",
   time:30,
@@ -82,7 +82,7 @@ var productData = [
 {
   offer:15,
   imageSrc: "/img/resturent-meal/meal-2.png",
-  title: "Meal 4",
+  title: "Mutton Meal",
   description: "Description for Meal 4",
   price: "₹75",
   time:30,
@@ -98,13 +98,39 @@ const totalAmountDisplay = document.getElementById("totalAmount"); //cart item p
 const cart = [];
 
 
+// added to cart on click button
 
-// ADD TO CART ON CLICK Function
-function addCart(productTitle,productPrice) {
-  // Your code to handle adding the item to the cart goes here
-  alert(productTitle + " added to cart");
-  cart.push({ title: productTitle, price: productPrice });
-  displayCart();
+function addCart(productTitle, productPrice) {
+  // Check if there are already 7 items with the same name in the cart
+  const itemCount = cart.filter(item => item.title === productTitle).length;
+  
+  if (itemCount >= 7) {
+    // Display an error notification
+    const errorNotification = document.createElement("div");
+    errorNotification.className = "notification error";
+    errorNotification.innerHTML = `<ion-icon class="error-icon" name="alert-circle-outline"></ion-icon> You can't add this item more than 7 quantity`;
+
+    const notificationContainer = document.getElementById("notificationContainer");
+    notificationContainer.appendChild(errorNotification);
+    
+    setTimeout(() => {
+      errorNotification.remove();
+    }, 4000);
+  } else {
+    cart.push({ title: productTitle, price: productPrice });
+    displayCart();
+    
+    const cartNotification = document.createElement("div");
+    cartNotification.className = "notification show";
+    cartNotification.innerHTML = `<ion-icon class="verified-icon" name="checkmark-circle-outline"></ion-icon> ${productTitle} added to cart`;
+    
+    const notificationContainer = document.getElementById("notificationContainer");
+    notificationContainer.appendChild(cartNotification);
+    
+    setTimeout(() => {
+      cartNotification.remove();
+    }, 4000);
+  }
 }
 
 
@@ -125,15 +151,6 @@ function displayCart(){
 
 
 
-// ADDED ITEM AFTER CART PAGE PROCEED TO BUY PRODUCT FUNCTION
-function proceedBuy() {
-  let confirmOrder = confirm(`Are you sure you want to buy?`);
-  if (confirmOrder) {
-    alert("Thank you for your purchase! We are experiencing some issues.");
-  } else {
-    alert("Please try again later.");
-  }
-}
 
 
 
@@ -169,3 +186,14 @@ productData.forEach((product)=>{
 `;
 container.innerHTML += productCardHTML;
 })
+
+
+// ADDED ITEM AFTER CART PAGE PROCEED TO BUY PRODUCT FUNCTION
+function proceedBuy() {
+  let confirmOrder = confirm(`Are you sure you want to buy?`);
+  if (confirmOrder) {
+    alert("Thank you for your purchase! We are experiencing some issues.");
+  } else {
+    alert("Please try again later.");
+  }
+}
