@@ -115,7 +115,7 @@ function addCart(productTitle, productPrice) {
     
     setTimeout(() => {
       errorNotification.remove();
-    }, 4000);
+    }, 3000);
   } else {
     cart.push({ title: productTitle, price: productPrice });
     displayCart();
@@ -129,7 +129,7 @@ function addCart(productTitle, productPrice) {
     
     setTimeout(() => {
       cartNotification.remove();
-    }, 4000);
+    }, 3000);
   }
 }
 
@@ -192,8 +192,26 @@ container.innerHTML += productCardHTML;
 function proceedBuy() {
   let confirmOrder = confirm(`Are you sure you want to buy?`);
   if (confirmOrder) {
-    alert("Thank you for your purchase! We are experiencing some issues.");
-  } else {
-    alert("Please try again later.");
-  }
+    const errorNotification = document.createElement("div");
+    errorNotification.className = "notification show";
+    errorNotification.innerHTML = `<ion-icon class="error-icon" name="alert-circle-outline"></ion-icon> Unfortunately, facelity Not available right Now`;
+
+    const notificationContainer = document.getElementById("notificationContainer");
+    notificationContainer.appendChild(errorNotification);
+    
+    setTimeout(() => {
+      errorNotification.remove();
+    }, 3000);
+    } else {
+      const errorNotification = document.createElement("div");
+      errorNotification.className = "notification error";
+      errorNotification.innerHTML = `<ion-icon class="error-icon" name="alert-circle-outline"></ion-icon> Sumthing want Wrong`;
+  
+      const notificationContainer = document.getElementById("notificationContainer");
+      notificationContainer.appendChild(errorNotification);
+      
+      setTimeout(() => {
+        errorNotification.remove();
+      }, 3000);
+    }
 }

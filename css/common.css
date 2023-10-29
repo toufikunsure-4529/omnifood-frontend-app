@@ -304,7 +304,7 @@ strong {
 
 .notification {
   position: fixed;
-  font-size: 14px;
+  font-size: 18px;
   top: 70px;
   right: 20px;
   color: #fff;
@@ -328,7 +328,7 @@ strong {
 }
 
 .verified-icon, .error-icon {
-  font-size: 24px;
+  font-size: 14px;
 }
 
 
