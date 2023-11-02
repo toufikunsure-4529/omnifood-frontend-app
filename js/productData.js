@@ -253,6 +253,8 @@ if(userLoggedIn){
     </html>
     `;
     orderConfirmationWindow.document.write(orderConfirmationHTML);
+    cart.length=0;
+    displayCart();
     } else {
       errorMsg("Something went wrong")
     }
@@ -308,3 +310,8 @@ function calculateTotalPrice() {
   return cart.reduce((total, item) => total + parseFloat(item.price.replace("₹", "")), 0).toFixed(2);
 
 }
+
+
+
+
+
