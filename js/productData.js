@@ -311,7 +311,3 @@ function calculateTotalPrice() {
 
 }
 
-
-
-
-
