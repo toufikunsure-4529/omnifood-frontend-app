@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="/css/order-confirmation.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="icon" href="/img/onlyLogo.png" />
+</head>
+<body>
+
+  <!-- loading animation after load page -->
+  <div id="loading-animation" style="margin-top: 205px;">
+    <div class="success-icon">
+      <div class="checkmark draw">
+        <img src="/img/verified.gif" alt="" class="verified-icon">
+      </div>
+  </div>
+  <p class="message">Order Placed Successfully!</p>
+</div>
+
+
+
+
+<div id="content-placeholder" style="display: none;">
+  <div class="order-confirmation">
+    <h4>You've successfully placed the order</h4>
+    <hr>
+    <div class="order-details">
+        <h5>Order Number:</h5>
+        <p id="orderNumber"></p>
+        <h5>Date:</h5>
+        <p id="orderDate"></p>
+    </div>
+    <div class="order-details">
+        <h5>Customer Information</h5>
+        <p id="customerName"></p>
+        <p id="customerEmail"></p>
+    </div>
+    <div class="order-details">
+        <h5>Shipping Address</h5>
+        <p id="shippingStreet"></p>
+        <p id="shippingCity"></p>
+        <p id="shippingCountry"></p>
+    </div>
+    <div class="order-summary">
+        <h5>Order Summary</h5>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="orderItems"></tbody>
+        </table>
+        <p class="total" id="orderTotal"></p>
+    </div>
+    <button type="button" class="btn btn-warning" id="printButton">Check Order Status</button>
+    <a href="/index.html" class="backHome">Home</a>
+
+  </div>
+    <script src="/js/order-confrim.js"></script>
+
+</body>
+</html>

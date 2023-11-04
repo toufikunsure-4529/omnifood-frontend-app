@@ -178,90 +178,23 @@ if(userLoggedIn){
   if (confirmOrder) {
     const orderNumber = generateOrderNumber();
     const orderDate = new Date();
-    const orderConfirmationWindow  =window.open('',"google","width=640,height=572");
-    const orderConfirmationHTML =`
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Order Confirmation</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <style>
-        body {
-          background-color: #f5f5f5;
-      }
-      .order-confirmation {
-          max-width: 600px;
-          margin: 0 auto;
-          background-color: #fff;
-          padding: 20px;
-          margin-top: 30px;
-          border-radius: 5px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      </style>
-    </head>
-    <body>
-      <div class="container">
-        <div class="order-confirmation">
-          <h4 class="text-center">You've successfully placed the order</h4>
-          <hr>
-          <div class="row">
-            <div class="col-md-6">
-                <h6>Order Number: ${orderNumber}</h6>
-            </div>
-            <div class="col-md-6 text-right">
-                <h6>Date: ${orderDate}</h6>
-            </div>
-        </div>
-         
-            <!-- Customer information -->
-            <h5>Customer Information</h5>
-            <p>Name: John Doe</p>
-            <p>Email: johndoe@example.com</p>
-
-            <!-- Shipping address -->
-            <h3>Shipping Address</h3>
-            <p>123 Main Street</p>
-            <p>City: Anytown</p>
-            <p>Country: United States</p>
-
-            <h3>Order Summary</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr style="
-                display: flex;
-                flex-direction: column;
-            ">
-                ${cart.map(item => `<td>${item.title} - ${item.price}</td>`).join('')}
-                  </tr>   
-                </tbody>
-            </table>
-            <p class="text-right"><strong>Total: ₹${calculateTotalPrice()}</strong></p>
-        </div>
-        <br />
-        <button type="button" class="btn btn-warning" id="printButton">Print</button>
-
-    </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-    document.getElementById('printButton').addEventListener('click', function() {
-      printButton.hidden=true;
-      window.print();
-    });
-  </script>
-</body>
-    </html>
-    `;
-    orderConfirmationWindow.document.write(orderConfirmationHTML);
+    const orderData={
+      orderNumber,
+      orderDate,
+      customerName: "John Doe",
+      customerEmail: "johndoe@example.com",
+      shippingAddress: {
+        street: "123 Main Street",
+        city: "Anytown",
+        country: "United States",
+      },
+      cart:cart,
+      total:calculateTotalPrice()
+    };
+    const orderJSON=JSON.stringify(orderData)
+    // Encode the order data for a URL parameter
+    const orderDataParam=encodeURIComponent(orderJSON)
+    window.location.href=`order-confirmation.html?data=${orderDataParam}`
     cart.length=0;
     displayCart();
     } else {
