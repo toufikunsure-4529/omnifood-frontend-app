@@ -71,30 +71,9 @@ th, td {
 }
 
 
-/* animation Css need */
-.container {
-  text-align: center;
-}
-
-.success-icon {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  position: relative;
-}
-
-.verified-icon{
-  border-radius: 10% 30%;
-
-}
 
 .message {
-  margin-top: 200px;
-  font-size: 30px;
+  font-size: 23px;
   color: #333;
 }
 
