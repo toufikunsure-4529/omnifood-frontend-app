@@ -178,7 +178,7 @@ if(userLoggedIn){
   if (confirmOrder) {
     const orderNumber = generateOrderNumber();
     const orderDate = new Date();
-    const orderConfirmationWindow  =window.open('','_blank');
+    const orderConfirmationWindow  =window.open('',"google","width=640,height=572");
     const orderConfirmationHTML =`
     <html>
     <head>
@@ -204,19 +204,19 @@ if(userLoggedIn){
     <body>
       <div class="container">
         <div class="order-confirmation">
-          <h2 class="text-center">Order Confirmation</h2>
+          <h4 class="text-center">You've successfully placed the order</h4>
           <hr>
           <div class="row">
             <div class="col-md-6">
-                <h4>Order Number: ${orderNumber}</h4>
+                <h6>Order Number: ${orderNumber}</h6>
             </div>
             <div class="col-md-6 text-right">
-                <h4>Date: ${orderDate}</h4>
+                <h6>Date: ${orderDate}</h6>
             </div>
         </div>
          
             <!-- Customer information -->
-            <h3>Customer Information</h3>
+            <h5>Customer Information</h5>
             <p>Name: John Doe</p>
             <p>Email: johndoe@example.com</p>
 
@@ -245,10 +245,19 @@ if(userLoggedIn){
             </table>
             <p class="text-right"><strong>Total: ₹${calculateTotalPrice()}</strong></p>
         </div>
+        <br />
+        <button type="button" class="btn btn-warning" id="printButton">Print</button>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+    document.getElementById('printButton').addEventListener('click', function() {
+      printButton.hidden=true;
+      window.print();
+    });
+  </script>
 </body>
     </html>
     `;
