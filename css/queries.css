@@ -280,6 +280,9 @@ Insted, 1rem = 1rem = 16px
     .carousel-item img{
       height: 100%;
     }
+    .meal:hover{
+      transform: none;
+    }
 
     
   }

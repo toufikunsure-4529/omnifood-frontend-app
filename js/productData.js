@@ -177,7 +177,8 @@ if(userLoggedIn){
   const confirmOrder = confirm(`Are you sure you want to proceed with payment?`);
   if (confirmOrder) {
     const orderNumber = generateOrderNumber();
-    const orderDate = new Date();
+    let orderDate = new Date();
+    orderDate = orderDate.toLocaleString();
     const orderData={
       orderNumber,
       orderDate,

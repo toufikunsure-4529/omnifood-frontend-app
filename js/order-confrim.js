@@ -27,6 +27,16 @@ document.getElementById('orderTotal').textContent = `Total: ₹${orderData.total
 
 
 
+let checkStatusBtn=document.getElementById("checkStatusBtn")
+checkStatusBtn.addEventListener("click",function(){
+  let orderStatus=document.getElementById("order-status")
+  orderStatus.style.display="block"
+})
+
+
+
+
+
 
 /* cursol animation after page loaded */
 document.addEventListener("DOMContentLoaded",function(){
