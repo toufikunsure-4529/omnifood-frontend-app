@@ -95,7 +95,7 @@ var productData = [
 let container = document.querySelector(".product-container"); //product card display container 
 const cartItemsContainer = document.getElementById("cartItems"); //cart item display conatiner
 const totalAmountDisplay = document.getElementById("totalAmount"); //cart item price dispaly container
-const cart = [];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 // added to cart on click button
@@ -109,6 +109,7 @@ function addCart(productTitle, productPrice) {
     errorMsg("You can't add this item more than 7 quantity")
   } else {
     cart.push({ title: productTitle, price: productPrice });
+    localStorage.setItem('cart', JSON.stringify(cart));
     displayCart();
     updateCartBadge();
     successMsg(`${productTitle} added to cart`)
@@ -198,6 +199,7 @@ if(userLoggedIn){
     const orderDataParam=encodeURIComponent(orderJSON)
     window.location.href=`order-confirmation.html?data=${orderDataParam}`
     cart.length=0;
+    localStorage.removeItem('cart');
     displayCart();
     } else {
       errorMsg("Something went wrong")
@@ -256,6 +258,6 @@ function calculateTotalPrice() {
 
 function updateCartBadge(){
   const badgeElement = document.getElementById('cart-badge');
-  badgeElement.textContent=cart.length
+  badgeElement.textContent=cart.length;
 }
 

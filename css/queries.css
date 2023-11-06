@@ -176,6 +176,9 @@ Insted, 1rem = 1rem = 16px
     flex-direction: column;
     gap: 4.8rem;
   }
+  .badge{
+    top: 405px;
+  }
 }
 
 .main-nav-link:link,
