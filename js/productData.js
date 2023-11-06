@@ -110,6 +110,7 @@ function addCart(productTitle, productPrice) {
   } else {
     cart.push({ title: productTitle, price: productPrice });
     displayCart();
+    updateCartBadge();
     successMsg(`${productTitle} added to cart`)
   }
 }
@@ -251,6 +252,10 @@ function isUserLoggedIn(){
 
 function calculateTotalPrice() {
   return cart.reduce((total, item) => total + parseFloat(item.price.replace("₹", "")), 0).toFixed(2);
+}
 
+function updateCartBadge(){
+  const badgeElement = document.getElementById('cart-badge');
+  badgeElement.textContent=cart.length
 }
 
