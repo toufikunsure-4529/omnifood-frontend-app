@@ -57,6 +57,9 @@ Insted, 1rem = 1rem = 16px
   .testimonials-container{
     padding: 9.6rem 3.2rem;
   }
+  .badge{
+    display: none;
+  }
 }
 
 /* ********************************* */
@@ -177,7 +180,8 @@ Insted, 1rem = 1rem = 16px
     gap: 4.8rem;
   }
   .badge{
-    top: 405px;
+    top: 336px;
+    right: 389px;
   }
 }
 
@@ -287,7 +291,6 @@ Insted, 1rem = 1rem = 16px
       transform: none;
     }
 
-    
   }
 
   
