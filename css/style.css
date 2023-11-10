@@ -168,7 +168,9 @@
       .offcanvas-header .btn-close{
         font-size: 18px;
         background-color: rgb(255, 152, 0);
+      
       }
+   
 
     .badge{ 
     display: flex;
