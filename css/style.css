@@ -278,6 +278,14 @@ border: 3px solid #fdf2e9;
   font-weight: 700;
 }
 
+.noticeMassage{
+  display: none;
+}
+.noticeMassage .container{
+  background-color: #51cf66;
+  padding-top: 30px;
+  padding-bottom: 1px;
+}
 /* ********************************* */
 /* FEATURED IN SECTION */
 /* ********************************* */
