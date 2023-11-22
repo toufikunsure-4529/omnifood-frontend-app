@@ -261,3 +261,17 @@ function updateCartBadge(){
   badgeElement.textContent=cart.length;
 }
 
+
+(function() {
+  const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.length = 0;
+  cart.push(...storedCart);
+  if(storedCart.length==0){
+    cartItemsBtn.hidden=true
+  }
+  else{
+    displayCart();
+  }
+  updateCartBadge();
+})();
+
