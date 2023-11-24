@@ -58,7 +58,7 @@ function renderCart() {
 
 
       cartList.innerHTML += promoCodeItem;
-      const newTotalAmount = orderData.total - orderData.discount;
+      const newTotalAmount = (orderData.total - orderData.discount).toFixed(2);
       updateTotalAmount(newTotalAmount);
 
     } else {
