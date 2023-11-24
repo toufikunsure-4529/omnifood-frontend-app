@@ -54,7 +54,7 @@ let hour = day.getHours();
 let mainContnet = document.getElementById("main-content")
 let closeMsg = document.getElementById("closeMsg")
 if (hour >= 20 || hour < 9) {
-  // mainContnet.style.filter = 'grayscale(100%)';
-  // mainContnet.style.pointerEvents='none'
+  mainContnet.style.filter = 'grayscale(100%)';
+  mainContnet.style.pointerEvents = 'none'
   closeMsg.style.display = 'block'
 }
