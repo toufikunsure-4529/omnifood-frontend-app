@@ -27,28 +27,27 @@ document.getElementById('orderTotal').textContent = `Total: ₹${orderData.total
 
 
 
-let checkStatusBtn=document.getElementById("checkStatusBtn")
-checkStatusBtn.addEventListener("click",function(){
-  let orderStatus=document.getElementById("order-status")
-  orderStatus.style.display="block"
+let checkStatusBtn = document.getElementById("checkStatusBtn")
+checkStatusBtn.addEventListener("click", function () {
+  let orderStatus = document.getElementById("order-status")
+  orderStatus.style.display = "block"
 })
 
 
 
 
 
-
 /* cursol animation after page loaded */
-document.addEventListener("DOMContentLoaded",function(){
-  const loadingAnimation=document.getElementById("loading-animation")
-  const contentPlaceholder=document.getElementById("content-placeholder")
-  setTimeout(function(){
-    loadingAnimation.style.display="none"
-    contentPlaceholder.style.display="block"
-    function loadContent(){
-      const newElement=document.createElement("p")
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingAnimation = document.getElementById("loading-animation")
+  const contentPlaceholder = document.getElementById("content-placeholder")
+  setTimeout(function () {
+    loadingAnimation.style.display = "none"
+    contentPlaceholder.style.display = "block"
+    function loadContent() {
+      const newElement = document.createElement("p")
       contentPlaceholder.appendChild(newElement)
     }
     loadContent();
-  },3000)
+  }, 3000)
 })

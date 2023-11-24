@@ -1,0 +1,47 @@
+/* Notification */
+
+.notification {
+  position: fixed;
+  font-size: 18px;
+  top: 70px;
+  right: 20px;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  display: none;
+  z-index: 99999;
+}
+
+.notification.show {
+  display: block;
+  animation: slideIn 0.5s, fadeOut 2s 1s;
+  background-color: #4caf50;
+}
+.notification.error {
+  background-color: #ff5733;
+  display: block;
+  animation: slideIn 0.5s, fadeOut 2s 1s;
+}
+
+.verified-icon,
+.error-icon {
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
