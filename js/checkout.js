@@ -25,7 +25,7 @@ function createCartItem(productName, offer, price) {
 // Function to provide container  data in the provided container
 function renderCart() {
   const cartContainer = document.querySelector('.row.g-5 .col-md-5');
-  const cartList = document.createElement('ul');
+  var cartList = document.createElement('ul');
   cartList.classList.add('list-group', 'mb-3');
 
 
@@ -44,8 +44,6 @@ function renderCart() {
     if (enteredPromoCode == "FIRSTORDER2024") {
       orderData.promoCode = enteredPromoCode; //dynamically orderdata object add
       orderData.discount = 20; //dynamically orderdata object add
-
-
       const promoCodeItem = `
       <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
         <div class="text-success">
@@ -54,6 +52,7 @@ function renderCart() {
         </div>
         <span class="text-success">−${orderData.discount}</span>
       </li>
+      
     `;
 
 
@@ -115,8 +114,66 @@ document.addEventListener("DOMContentLoaded", function () {
       contentPlaceholder.appendChild(newElement)
     }
     loadContent();
-  }, 3000)
+  }, 0)
 })
 
 
 
+//Address Form Validation 
+let formData = {}; // Declare formData at a higher scope
+let displayAddress = document.getElementById("displayAddress")
+
+let billingForm = document.getElementById("billingForm");
+
+billingForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+  saveFormData()
+})
+
+function saveFormData() {
+  formData = {
+    fullName: document.getElementById("fullName").value,
+    email: document.getElementById("email").value,
+    mobileNo: document.getElementById("mbbileNo").value,
+    address: document.getElementById("address").value,
+    landmark: document.getElementById("landmark").value,
+    zip: document.getElementById("zip").value,
+    sameAddress: document.getElementById('same-address').checked,
+    saveInfo: document.getElementById('save-info').checked,
+  }
+  let formDataJSON = JSON.stringify(formData)
+  localStorage.setItem("formData", formDataJSON)
+  successMsg('Form data saved successfully!');
+  billingForm.reset()
+  addressCard(formData); // Call addressCard function here to display the card after saving the form data
+
+}
+
+
+function addressCard(formData) {
+  let cardHTML = `<div class="card w-100">
+      <div class="card-body">
+        <h5 class="card-title text-center">Shipping address</h5>
+        <p class="card-text">Receiver's Full Name -${formData.fullName}</p>
+        <p class="card-text">Email (We will email after delivery)-${formData.email}</p>
+        <p class="card-text">Mobile (We will call during delivery)-${formData.mobileNo}</p>
+        <p class="card-text">Shipping Delivery address -${formData.address}</p>
+        <p class="card-text">Shipping Zip Code -${formData.zip}</p>
+      </div>
+           <button class="w-100 btn btn-warning" type="submit"
+              onclick="errorMsg('We apologize for the inconvenience...')">PROCCED TO BUY</button>
+    </div>`;
+
+  displayAddress.innerHTML += cardHTML;
+}
+
+
+function loadFormData() {
+  let formDataJSON = localStorage.getItem("formData");
+  if (formDataJSON) {
+    formData = JSON.parse(formDataJSON);
+    addressCard(formData);
+  }
+}
+
+loadFormData()

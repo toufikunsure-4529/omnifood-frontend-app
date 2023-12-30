@@ -138,7 +138,7 @@ function displayCart() {
 
 // PRODUCT DATA TO DYNAMIC ADDED PRODUCT CART IN HTML 
 productData.forEach((product) => {
-  var productCardHTML = `
+  let productCardHTML = `
   <div class="meal">
      <div class="meal-tags-img">
      <div class="meal-tags">
@@ -236,13 +236,13 @@ function updateCartBadge() {
   badgeElement.textContent = cart.length;
 }
 
-
+//intially chcek older localstorage cart data and view badge and displaycart
 (function () {
   const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
   cart.length = 0;
   cart.push(...storedCart);
   if (storedCart.length == 0) {
-    cartItemsBtn.hidden = true
+    cartItemsBtn.hidden = true;
   }
   else {
     displayCart();
