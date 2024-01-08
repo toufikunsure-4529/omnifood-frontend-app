@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       contentPlaceholder.appendChild(newElement)
     }
     loadContent();
-  }, 0)
+  }, 3000)
 })
 
 

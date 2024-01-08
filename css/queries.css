@@ -33,7 +33,7 @@ Insted, 1rem = 1rem = 16px
   }
 
   .grid{
-    column-gap: 4.8rem;
+    column-gap: 1px;
     row-gap: 6.4rem;
   }
   .heading-secondary{
