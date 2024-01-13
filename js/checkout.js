@@ -41,7 +41,9 @@ function renderCart() {
   promoCodeForm.addEventListener("submit", (e) => {
     e.preventDefault()
     const enteredPromoCode = promoCodeInput.value.trim().toUpperCase();
-    if (enteredPromoCode == "FIRSTORDER2024") {
+    if(enteredPromoCode==""){
+    }
+    else if (enteredPromoCode == "FIRSTORDER2024") {
       orderData.promoCode = enteredPromoCode; //dynamically orderdata object add
       orderData.discount = 20; //dynamically orderdata object add
       const promoCodeItem = `
@@ -60,7 +62,9 @@ function renderCart() {
       const newTotalAmount = (orderData.total - orderData.discount).toFixed(2);
       updateTotalAmount(newTotalAmount);
 
-    } else {
+    }
+    
+    else {
       errorMsg("Invalid promo code. Please try again.")
     }
   })

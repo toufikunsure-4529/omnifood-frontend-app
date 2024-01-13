@@ -58,3 +58,5 @@ if (hour >= 20 || hour < 9) {
   mainContnet.style.pointerEvents = 'none'
   closeMsg.style.display = 'block'
 }
+
+

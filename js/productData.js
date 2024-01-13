@@ -99,7 +99,6 @@ const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 // added to cart on click button
-
 function addCart(productTitle, productPrice, productOffer) {
   // Check if there are already 7 items with the same name in the cart
   const itemCount = cart.filter(item => item.title === productTitle).length;
@@ -122,8 +121,16 @@ function displayCart() {
   let total = 0;
   cartItemsContainer.innerHTML = "";
   cart.forEach((product, index) => {
-    const cartItem = document.createElement("p");
+    const cartItem = document.createElement("div");
     cartItem.textContent = `Item ${index + 1}: ${product.title} - ${product.price}`;
+    cartItem.classList.add("cartItemP");
+    
+    const deleteBtn=document.createElement("span")
+    deleteBtn.innerHTML =`<ion-icon name="trash-outline"></ion-icon>`
+    deleteBtn.classList.add("deleteBtn")
+    deleteBtn.addEventListener("click",()=>deleteCartItem(index))
+    cartItem.append(deleteBtn)
+
     cartItemsContainer.appendChild(cartItem)
     total += parseFloat(product.price.replace("₹", ""));
 
@@ -132,6 +139,12 @@ function displayCart() {
   cartItemsBtn.hidden = false;
 }
 
+
+function deleteCartItem(index){
+  cart.splice(index,1)
+  displayCart();
+  updateCartBadge()
+}
 
 
 
